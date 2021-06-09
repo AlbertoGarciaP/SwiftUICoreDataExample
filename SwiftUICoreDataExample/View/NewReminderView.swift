@@ -12,6 +12,7 @@ struct NewReminderView: View {
     // MARK: - Properties
     
     @State private var reminder: String = ""
+    @Environment(\.managedObjectContext) private var viewContext
     @Binding var isShowing: Bool
     
     private var isButtonDisabled: Bool {
@@ -22,6 +23,20 @@ struct NewReminderView: View {
     
     private func addReminder() {
         withAnimation {
+            let newReminder = Reminder(context: viewContext)
+            newReminder.timestamp = Date()
+            newReminder.title = reminder
+            newReminder.completion = false
+            newReminder.id = UUID()
+            
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+            
+            reminder = ""
             isShowing = false
         }
     }
