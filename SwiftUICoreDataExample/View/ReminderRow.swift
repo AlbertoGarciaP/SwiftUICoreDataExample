@@ -21,11 +21,10 @@ struct ReminderRow: View {
                 .animation(.default)
         })
         .toggleStyle(CheckboxStyle())
-    }
-}
-
-struct ReminderRow_Preview: PreviewProvider {
-    static var previews: some View {
-        ReminderRow(text: "Some Text")
+        .onReceive(reminder.objectWillChange, perform: { _ in
+            if self.viewContext.hasChanges {
+                try? self.viewContext.save()
+            }
+        })
     }
 }

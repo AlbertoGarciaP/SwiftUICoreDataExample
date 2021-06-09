@@ -9,15 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    
-    @State var example = [
-        "title1",
-        "title2",
-        "title3",
-        "title4",
-        "title5"
-    ]
-    
     @State private var showNewReminder: Bool = false
     
     // Fetch data
@@ -63,7 +54,7 @@ struct ContentView: View {
     } //: body
     
     private func remove(offset: IndexSet) {
-        example.remove(atOffsets: offset)
+        
     }
 }
 
