@@ -18,29 +18,44 @@ struct ContentView: View {
         "title5"
     ]
     
+    @State private var showNewReminder: Bool = false
+    
     // MARK: - Body
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(example, id: \.self) { text in
-                    Text(text)
+            ZStack {
+                List {
+                    ForEach(example, id: \.self) { text in
+                        Text(text)
+                    }
+                    .onDelete(perform: { indexSet in
+                        print("Delete index: \(indexSet)")
+                    })
+                    
+                } //: List
+                .toolbar {
+                    Button(action: {
+                        showNewReminder.toggle()
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
                 }
-                .onDelete(perform: { indexSet in
-                    print("Delete index: \(indexSet)")
-                })
+                .listStyle(InsetGroupedListStyle())
+                .navigationTitle("Reminders")
                 
-            } //: List
-            .toolbar {
-                Button(action: {
-                    example.append("title6")
-                }, label: {
-                    Image(systemName: "plus")
-                })
-            }
-            .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Reminders")
-        } // NavigationView
+                if showNewReminder {
+                    BlankView(backgroundColor: .gray,
+                              backgroundOpacity: 0.5)
+                        .onTapGesture {
+                            withAnimation {
+                                showNewReminder.toggle()
+                            }
+                        }
+                    NewReminderView(isShowing: $showNewReminder)
+                }
+            } //: ZStack
+        } //: NavigationView
     } //: body
 }
 
