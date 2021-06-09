@@ -20,6 +20,12 @@ struct NewReminderView: View {
     
     // MARK: - Body
     
+    private func addReminder() {
+        withAnimation {
+            isShowing = false
+        }
+    }
+    
     var body: some View {
         VStack {
             Spacer()
@@ -32,13 +38,14 @@ struct NewReminderView: View {
                     .cornerRadius(10)
                 
                 Button(action: {
-                    
+                    addReminder()
                 }, label: {
                     Spacer()
                     Text("Save")
                         .font(.system(size: 24, weight: .bold, design: .rounded))
                     Spacer()
                 })
+                .disabled(isButtonDisabled)
                 .padding()
                 .foregroundColor(.white)
                 .background(isButtonDisabled ? Color.blue : Color.pink)
