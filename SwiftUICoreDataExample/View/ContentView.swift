@@ -27,10 +27,9 @@ struct ContentView: View {
             ZStack {
                 List {
                     ForEach(example, id: \.self) { text in
-                        Text(text)
+                        ReminderRow(text: text)
                     }
                     .onDelete(perform: remove)
-                    
                 } //: List
                 .toolbar {
                     Button(action: {
