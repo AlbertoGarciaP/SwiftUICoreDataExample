@@ -29,9 +29,7 @@ struct ContentView: View {
                     ForEach(example, id: \.self) { text in
                         Text(text)
                     }
-                    .onDelete(perform: { indexSet in
-                        print("Delete index: \(indexSet)")
-                    })
+                    .onDelete(perform: remove)
                     
                 } //: List
                 .toolbar {
@@ -57,6 +55,10 @@ struct ContentView: View {
             } //: ZStack
         } //: NavigationView
     } //: body
+    
+    private func remove(offset: IndexSet) {
+        example.remove(atOffsets: offset)
+    }
 }
 
 // MARK: - Preview
