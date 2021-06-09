@@ -59,13 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				21A6BEBA26700B8A005B8508 /* SwiftUICoreDataExampleApp.swift */,
-				21A6BEBC26700B8A005B8508 /* ContentView.swift */,
-				21A6BEE526707687005B8508 /* NewReminderView.swift */,
+				21A6BEEE26707F87005B8508 /* View */,
+				21A6BEF026707FA8005B8508 /* Helpers */,
 				21A6BEBE26700B8D005B8508 /* Assets.xcassets */,
 				21A6BEC326700B8D005B8508 /* Info.plist */,
 				21A6BEC026700B8D005B8508 /* Preview Content */,
-				21A6BEE826707C80005B8508 /* BlankView.swift */,
-				21A6BEEB26707D21005B8508 /* Extensions.swift */,
 			);
 			path = SwiftUICoreDataExample;
 			sourceTree = "<group>";
@@ -76,6 +74,24 @@
 				21A6BEC126700B8D005B8508 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		21A6BEEE26707F87005B8508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21A6BEBC26700B8A005B8508 /* ContentView.swift */,
+				21A6BEE526707687005B8508 /* NewReminderView.swift */,
+				21A6BEE826707C80005B8508 /* BlankView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21A6BEF026707FA8005B8508 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21A6BEEB26707D21005B8508 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
