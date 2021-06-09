@@ -31,6 +31,5 @@ struct BlankView: View {
 struct BlankView_Previews: PreviewProvider {
     static var previews: some View {
         BlankView(backgroundColor: .black, backgroundOpacity: 0.3)
-            .background(backgroundGradient.ignoresSafeArea(.all))
     }
 }

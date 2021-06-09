@@ -13,7 +13,6 @@
 		21A6BEC226700B8D005B8508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A6BEC126700B8D005B8508 /* Preview Assets.xcassets */; };
 		21A6BEE626707687005B8508 /* NewReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6BEE526707687005B8508 /* NewReminderView.swift */; };
 		21A6BEE926707C80005B8508 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6BEE826707C80005B8508 /* BlankView.swift */; };
-		21A6BEEC26707D21005B8508 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6BEEB26707D21005B8508 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		21A6BEC326700B8D005B8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A6BEE526707687005B8508 /* NewReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderView.swift; sourceTree = "<group>"; };
 		21A6BEE826707C80005B8508 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
-		21A6BEEB26707D21005B8508 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 			children = (
 				21A6BEBA26700B8A005B8508 /* SwiftUICoreDataExampleApp.swift */,
 				21A6BEEE26707F87005B8508 /* View */,
-				21A6BEF026707FA8005B8508 /* Helpers */,
 				21A6BEBE26700B8D005B8508 /* Assets.xcassets */,
 				21A6BEC326700B8D005B8508 /* Info.plist */,
 				21A6BEC026700B8D005B8508 /* Preview Content */,
@@ -84,14 +81,6 @@
 				21A6BEE826707C80005B8508 /* BlankView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		21A6BEF026707FA8005B8508 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				21A6BEEB26707D21005B8508 /* Extensions.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +152,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21A6BEEC26707D21005B8508 /* Extensions.swift in Sources */,
 				21A6BEE626707687005B8508 /* NewReminderView.swift in Sources */,
 				21A6BEE926707C80005B8508 /* BlankView.swift in Sources */,
 				21A6BEBD26700B8A005B8508 /* ContentView.swift in Sources */,
