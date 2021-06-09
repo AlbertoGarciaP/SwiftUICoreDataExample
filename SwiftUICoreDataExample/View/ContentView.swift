@@ -20,14 +20,21 @@ struct ContentView: View {
     
     @State private var showNewReminder: Bool = false
     
+    // Fetch data
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Reminder.timestamp, ascending: true)], animation: .default)
+    private var reminders: FetchedResults<Reminder>
+    
+    
     // MARK: - Body
     
     var body: some View {
         NavigationView {
             ZStack {
                 List {
-                    ForEach(example, id: \.self) { text in
-                        ReminderRow(text: text)
+                    ForEach(reminders) { reminder in
+                        ReminderRow(reminder: reminder)
                     }
                     .onDelete(perform: remove)
                 } //: List

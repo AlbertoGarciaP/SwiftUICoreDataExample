@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ReminderRow: View {
     
-    var text: String
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var reminder: Reminder
     
     var body: some View {
-        Toggle(isOn: .constant(true), label: {
-            Text(text)
+        Toggle(isOn: $reminder.completion, label: {
+            Text(reminder.title ?? "")
                 .font(.system(.title2, design: .rounded))
                 .fontWeight(.heavy)
                 .padding(.vertical, 12)
