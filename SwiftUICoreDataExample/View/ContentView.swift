@@ -54,7 +54,17 @@ struct ContentView: View {
     } //: body
     
     private func remove(offset: IndexSet) {
-        
+        withAnimation {
+            offset.map { reminders[$0] }
+                .forEach(viewContext.delete)
+            
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolve error \(nsError), \(nsError.userInfo)")
+            }
+        }
     }
 }
 
