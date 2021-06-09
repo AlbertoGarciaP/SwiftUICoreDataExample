@@ -11,6 +11,7 @@
 		21A6BEBD26700B8A005B8508 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6BEBC26700B8A005B8508 /* ContentView.swift */; };
 		21A6BEBF26700B8D005B8508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A6BEBE26700B8D005B8508 /* Assets.xcassets */; };
 		21A6BEC226700B8D005B8508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A6BEC126700B8D005B8508 /* Preview Assets.xcassets */; };
+		21A6BEE626707687005B8508 /* NewReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6BEE526707687005B8508 /* NewReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		21A6BEBE26700B8D005B8508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A6BEC126700B8D005B8508 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21A6BEC326700B8D005B8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A6BEE526707687005B8508 /* NewReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				21A6BEBA26700B8A005B8508 /* SwiftUICoreDataExampleApp.swift */,
 				21A6BEBC26700B8A005B8508 /* ContentView.swift */,
+				21A6BEE526707687005B8508 /* NewReminderView.swift */,
 				21A6BEBE26700B8D005B8508 /* Assets.xcassets */,
 				21A6BEC326700B8D005B8508 /* Info.plist */,
 				21A6BEC026700B8D005B8508 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A6BEE626707687005B8508 /* NewReminderView.swift in Sources */,
 				21A6BEBD26700B8A005B8508 /* ContentView.swift in Sources */,
 				21A6BEBB26700B8A005B8508 /* SwiftUICoreDataExampleApp.swift in Sources */,
 			);
